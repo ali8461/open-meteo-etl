@@ -75,24 +75,7 @@ astro dev start
 3. Ensure connections are set up in Airflow UI under Admin > Connections.
 4. Trigger the DAG manually via the Airflow UI or wait for the daily schedule.
 
-??? Sample Output Table
 
-Table: weather_data
-
-latitude
-longitude
-temperature
-windspeed
-winddirection
-weathercode
-timestamp
-51.5074
--0.1278
-20.1
-5.3
-180
-1
-2025-08-06 10:00:00
 ## Testing & Monitoring
 * View DAG runs in the Airflow UI
 * Logs are available per task for debugging
@@ -100,6 +83,7 @@ timestamp
 ## Schedule
 * Frequency: Daily (@daily)
 * Catchup: Disabled (catchup=False)
+
 
 
 
