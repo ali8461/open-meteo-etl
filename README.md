@@ -17,15 +17,15 @@ This project implements an **ETL (Extract, Transform, Load)** pipeline that fetc
 ##  Project Structure
 
 open-meteo-etl/
-?
-??? dags/
-?   ??? etlweather.py         # Main ETL DAG for weather data
-?
-??? airflow_settings.yaml     # Airflow configuration settings
-??? docker-compose.yml        # Docker Compose file to run Airflow
-??? Dockerfile                # Dockerfile to build your Airflow environment
-??? LICENSE                   # License file
-??? README.md                 # Project documentation (this file)
+│
+├── dags/
+│   └── etlweather.py         # Main ETL DAG for weather data
+│
+├── airflow_settings.yaml     # Airflow configuration settings
+├── docker-compose.yml        # Docker Compose file to run Airflow
+├── Dockerfile                # Dockerfile to build your Airflow environment
+├── LICENSE                   # License file
+└── README.md                 # Project documentation (this file)
 
 
 
@@ -118,5 +118,6 @@ timestamp
 ## Schedule
 * Frequency: Daily (@daily)
 * Catchup: Disabled (catchup=False)
+
 
 
