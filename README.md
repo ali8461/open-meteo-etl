@@ -1,10 +1,10 @@
-# ??? Weather ETL Pipeline with Airflow & Astro
+#  Weather ETL Pipeline with Airflow & Astro
 
 This project implements an **ETL (Extract, Transform, Load)** pipeline that fetches **current weather data** for London from the **Open-Meteo API**, processes the data using Python, and loads it into a **PostgreSQL** database. The workflow is orchestrated using **Apache Airflow** and **Astro (Astronomer)**.
 
 ---
 
-## ?? Features
+##  Features
 
 - **Extract**: Current weather data from Open-Meteo API.
 - **Transform**: Clean and structure weather data.
@@ -14,7 +14,7 @@ This project implements an **ETL (Extract, Transform, Load)** pipeline that fetc
 
 ---
 
-## ?? Project Structure
+##  Project Structure
 
 open-meteo-etl/
 ?
@@ -32,17 +32,17 @@ open-meteo-etl/
 
 ---
 
-## ?? Requirements
+##  Requirements
 
 - **Airflow** (via Astro CLI or standard installation)
 - **PostgreSQL** database
 - Airflow connections configured:
-  - `open_meteo_api` – HTTP connection to Open-Meteo
-  - `postgres_default` – PostgreSQL connection
+  - `open_meteo_api` â€“ HTTP connection to Open-Meteo
+  - `postgres_default` â€“ PostgreSQL connection
 
 ---
 
-## ?? Airflow Connection Setup
+##  Airflow Connection Setup
 
 ### 1. `open_meteo_api`
 - **Type**: HTTP
@@ -58,7 +58,7 @@ You can add these connections using the Airflow UI or Astro CLI.
 
 ---
 
-## ?? How It Works
+##  How It Works
 
 ### DAG: `weather_etl_pipeline`
 
@@ -79,7 +79,7 @@ Weather data includes:
 
 ---
 
-## ??? How to Run
+##  How to Run
 
 1. **Clone the repository** and navigate into it:
    ```bash
@@ -97,11 +97,26 @@ astro dev start
 
 Table: weather_data
 
-latitudelongitudetemperaturewindspeedwinddirectionweathercodetimestamp51.5074-0.127820.15.318012025-08-06 10:00:00## Testing & Monitoring
+latitude
+longitude
+temperature
+windspeed
+winddirection
+weathercode
+timestamp
+51.5074
+-0.1278
+20.1
+5.3
+180
+1
+2025-08-06 10:00:00
+## Testing & Monitoring
 * View DAG runs in the Airflow UI
 * Logs are available per task for debugging
 * PostgreSQL DB can be inspected to verify successful data loads
 ## Schedule
 * Frequency: Daily (@daily)
 * Catchup: Disabled (catchup=False)
+
 
